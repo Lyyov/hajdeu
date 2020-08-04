@@ -1,0 +1,33 @@
+@mixin textRoboto($fontW, $fontSize) {
+  font-family: "Roboto Condensed";
+  font-size: $fontSize;
+  color: #000000;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  font-weight: $fontW;
+}
+@mixin textPoppins($fontW, $fontSize) {
+  font-family: "Montserrat";
+  font-size: $fontSize;
+  color: #fff;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  font-weight: $fontW;
+}
+
+@mixin cabinetText($fontW, $fontSize, $colorCabinet) {
+  font-family: "Montserrat";
+  font-size: $fontSize;
+  color: $colorCabinet;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  font-weight: $fontW;
+}
+@mixin cartText($fontW, $fontSize, $colorCart) {
+  font-family: "Montserrat";
+  font-size: $fontSize;
+  color: $colorCart;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  font-weight: $fontW;
+}
