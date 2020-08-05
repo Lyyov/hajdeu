@@ -359,6 +359,31 @@ header {
   .header-bottom {
     border-top: 1px solid #fff;
     height: $height-header-bottom;
+
+    li {
+      position: relative;
+      display: block;
+
+      ul {
+        background: $light-background;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 15px;
+        min-width: 200px;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .3s ease;
+        box-shadow: 0 7px 9px 0 rgba(179,179,179,0.50);
+      }
+
+      &:hover ul {
+        height: auto;
+        opacity: 1;
+      }
+    }
   }
 
   .header-bottom-right {
@@ -411,11 +436,11 @@ header {
       line-height: $height-header-bottom;
       padding: 0 15px;
       transition: all .3s ease;
+    }
 
-      &:hover {
-        color: $font-color-pink;
-        box-shadow: 0 7px 9px 0 rgba(179,179,179,0.50);
-      }
+    li:hover>a{
+      color: $font-color-pink;
+      box-shadow: 0 7px 9px 0 rgba(179,179,179,0.50);
     }
 
     a, span {
