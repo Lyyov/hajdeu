@@ -318,6 +318,12 @@ main {
 
   span {
     padding-right: 40px;
+
+    svg {
+      height: 22px;
+      width: auto;
+      margin-right: 5px;
+    }
   }
 
   &:after {
