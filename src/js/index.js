@@ -90,6 +90,44 @@ if(screen.width > 768) {
   }
 }
 
+// slideres
+
+$( document ).ready(function() {
+
+  const defaultSliderSettings = {
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    arrows: false,
+    dots: true,
+    speed: 500
+  }
+
+  const sliderServiceTestimonial = {
+    slidesToShow: 3
+  };
+
+  const sliderHomeTestimonial = {
+    slidesToShow: 1,
+    fade: true,
+    cssEase: 'ease-in-out'
+  }
+
+  let sliderSettings = {}
+
+  if ($("main").hasClass("home-content")) {
+    sliderSettings = { ...defaultSliderSettings, ...sliderHomeTestimonial }
+      $(".slider-testimonials").slick(sliderSettings);
+  } else if ($("main").hasClass("services-content")) {
+    sliderSettings = { ...defaultSliderSettings, ...sliderServiceTestimonial }
+    $(".slider-testimonials").slick(sliderSettings);
+  }
+
+  
+});
+
 // $("main").css("padding-top", headerHeight + "px");
 
 // $(".slideParteners").slick({
