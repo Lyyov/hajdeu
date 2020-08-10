@@ -5,8 +5,6 @@
   src: local('Avenir-Medium'), url(../fonts/Avenir-Medium.woff2) format('woff2'), url(../fonts/Avenir-Medium.woff) format('woff');
 }
 
-
-
 @font-face {
   font-family: 'Avenir-Heavy';
   font-style: normal;
@@ -1878,6 +1876,63 @@ footer {
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 767px) {
+
+  #cover {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  a.logo {
+  
+    img {
+      width: 200px;
+    }
+  }
+
+  header {
+    width: 300px;
+    height: 100vh;
+    background: $light-background;
+    overflow: scroll;
+
+    a.logo {
+      display: block;
+      text-align: center;
+      padding: 30px 0;
+    }
+  
+    .header-top{
+      height: auto;
+    }
+  
+    .header-bottom-right {
+      flex-direction: column;
+    }
+
+    .header-contact {
+      flex-direction: column;
+
+      &>div {
+        margin-bottom: 30px;
+        justify-content: center;
+      }
+    }
+  
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: -15px;
+    }
+
+    a {
+      text-align: center;
+    }
   }
 }
 
