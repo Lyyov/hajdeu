@@ -1,74 +1,8 @@
-let headerHeight = $("header").height();
-let slider = $(".lightBox");
-let sliderItem = $(slider).find(".item");
-let target1 = 1;
-let heightSubmenu = $(".submenu").height();
-let heightSubmenu2 = $(".submenu2").height();
-let burger = $(".burger");
-let submenuButton = $(".buttHeader");
-let backMenu = $(".menuMob").find("span.back")
+
 let team = $("#team");
 
 let serviceItemHeight = 0;
 
-if (screen.width < 768) {
-  var header = $("header");
-  var distance = $("main").offset().top,
-  $window = $(window);
-
-  $window.scroll(function() {
-    if ($window.scrollTop() != distance) {
-      $(header).addClass('top');
-    } else {
-      $(header).removeClass("top");
-    }
-  });
-
-  $(burger).click(function() {
-    if($(this).hasClass('burgerOpen')){
-      $(this).removeClass("burgerOpen");
-      $('.menuMob').find("ul").css('left', '-360px');
-      $('body').removeClass('bodyHidden');
-    } else {
-      $(this).addClass("burgerOpen");
-      $('.menuMob').children("ul").css('left', '0');
-      $('body').addClass('bodyHidden');
-    }
-
-    
-  });
-  
-  $(document).mouseup(function(e) {
-    if (
-      !$('.menuMob').is(e.target) &&
-      !$(burger).is(e.target) &&
-      $('.menuMob').has(e.target).length === 0
-    ) {
-      $('.menuMob').find("ul").css('left', '-360px')
-      $('body').removeClass('bodyHidden');
-      $(burger).removeClass("burgerOpen");
-    }
-  });
-
-  $(backMenu).click(function() {
-    $(this).parent().parent().css('left', '-360px');
-  });
-
-  $(submenuButton).click(function(e) {
-    $(this).next('ul').css('left', '0px');
-    $(this).next('ul').children('li').children('span.back').text($(this).text());
-  });
-
-  $("footer").find("ul").children("li:first-child").click(function(e) {
-    
-    if($(this).parent().hasClass("open")) {
-      $(this).parent().removeClass("open");
-    } else {
-      $("footer").find("ul").removeClass("open")
-      $(this).parent().addClass("open");
-    }
-  })
-}
 
 if(screen.width > 768) {
   let serviceItem = $(".service-description");
@@ -90,6 +24,30 @@ if(screen.width > 768) {
   }
 }
 
+// header && footer
+
+if(screen.width < 767) {
+  $( document ).ready(function() {
+    const menuList = $("#menu-list");
+    const burger = $("#burger");
+
+    burger.click(function() {
+      $(this).toggleClass("burgerOpen");
+      $("body").toggleClass("header-open");
+    })
+  
+    $(document).on("click", menuList, function(e) { 
+      if ($(e.target).children("span")) {
+        $(e.target).next("ul").toggleClass("open")
+      }
+    })
+
+    $("footer").find(".title").click(function() {
+      $(this).parent().toggleClass("open")
+    })
+  });
+}
+
 // slideres
 
 $( document ).ready(function() {
@@ -106,7 +64,15 @@ $( document ).ready(function() {
   }
 
   const sliderServiceTestimonial = {
-    slidesToShow: 3
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   };
 
   const sliderHomeTestimonial = {
