@@ -1946,7 +1946,7 @@ footer {
   display: none;
   padding: 0 15px;
   align-items: center;
-  z-index: 3;
+  z-index: 5;
   transition: left .3s ease;
 
   a.logo {
@@ -1972,7 +1972,7 @@ footer {
     height: 100vh;
 
     #header-mobile {
-      left: 300px;
+      left: calc(100vw - 60px);
     }
 
     header {
@@ -2000,13 +2000,13 @@ footer {
   }
 
   header {
-    width: 300px;
+    width: 100vw;
     height: 100vh;
     background: #fff;
     overflow: scroll;
     padding: 0 15px;
     padding-bottom: 30px;
-    left: -300px;
+    left: -100vw;
     transition: left .3s ease;
 
     a.logo {
@@ -2435,7 +2435,7 @@ footer {
   
     .rates-section {
       padding-bottom: 30px;
-      
+
       .button {
         margin-bottom: 60px;
       }
