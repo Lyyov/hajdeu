@@ -1622,6 +1622,10 @@ footer {
   .team-container {
     top: 0;
     margin-top: 0;
+
+    h3 span {
+      color: $font-color-blue;
+    }
   }
 
   .map-contact {
@@ -1973,6 +1977,7 @@ footer {
 
     #header-mobile {
       left: calc(100vw - 60px);
+      background: #ffffff;
     }
 
     header {
@@ -2440,6 +2445,14 @@ footer {
         margin-bottom: 60px;
       }
       
+    }
+  }
+
+  .modal {
+
+    .modal-content {
+
+      padding: 40px 15px;
     }
   }
 }
