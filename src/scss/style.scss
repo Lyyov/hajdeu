@@ -923,6 +923,74 @@ footer {
   }
 }
 
+.tabs {
+  padding: 80px 0;
+
+  h3 {
+    margin-bottom: 30px;
+  }
+
+  .tabs-text {
+    margin-bottom: 60px;
+  }
+
+  .nav {
+    display: flex;
+
+    li {
+      display: block;
+      border: 3px solid $blue-background-rgba;
+
+      &:last-child {
+        border-right: 3px solid $blue-background-rgba;
+      }
+    }
+
+    a {
+      font-size: $font-size-medium;
+      color: $font-color-light;
+      font-family: $font-avenir-heavy;
+      display: block;
+      text-align: center;
+      line-height: 40px;
+      background: $blue-background;
+      padding-right: 30px;
+      padding-left: 30px;
+
+      &:hover,
+      &.active {
+        background: #fff;
+        color: $font-color-blue;
+      }
+    }
+  }
+
+  .tab-item {
+    display: flex;
+    flex-wrap: nowrap;
+    float: left;
+    width: 100%;
+    padding: 10px 15px;
+    border-bottom: 1px dotted $blue-background-rgba;
+    
+    span {
+      display: block;
+      width: 100%;
+      font-size: $font-size-standard;
+      color: $font-color-blue;
+      font-family: $font-avenir-medium;
+      
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  .tab-content {
+    margin-top: 30px;
+  }
+}
+
 .ranges {
   margin-top: 10px;
 
@@ -2423,6 +2491,15 @@ footer {
     }
   }
 
+  .tabs {
+  
+    .nav {
+      li {
+        width: 100%;
+      }
+    }
+  }
+
   .services {
     .services-item {
       margin-bottom: 20px;
@@ -2671,6 +2748,18 @@ footer {
         margin-bottom: 60px;
       }
       
+    }
+  }
+
+  .service-one-content {
+
+    .service-one-banner {
+      height: auto;
+      padding: 30px 0;
+
+      .background-banner {
+        display: none;
+      }
     }
   }
 
