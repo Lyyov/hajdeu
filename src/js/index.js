@@ -85,6 +85,10 @@ $( document ).ready(function() {
     $(".slider-testimonials").slick(sliderSettings);
   }
 
+  $(".slider-home-banner").slick({
+    ...defaultSliderSettings,
+    ...sliderHomeTestimonial
+  });
   
 });
 

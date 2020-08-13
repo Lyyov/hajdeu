@@ -483,7 +483,7 @@ header {
 }
 
 footer {
-  background: $footer-background;
+  background: $light-background;
 
   .footer-inner {
     padding: 100px 0;
@@ -495,7 +495,7 @@ footer {
     border-top: 1px solid #13476A;
 
     p {
-      color: $font-color-light;
+      color: $font-color-blue;
       line-height: 60px;
       margin-bottom: 0;
       padding: 0;
@@ -527,7 +527,7 @@ footer {
   a, li, p {
     font-family: $font-avenir-medium;
     font-size: $font-size-standard;
-    color: $font-color-light;
+    color: $font-color-blue;
     line-height: 1.5;
     padding: 5px 0;
   }
@@ -537,7 +537,7 @@ footer {
   }
 
   a:hover {
-    color: $font-color-light
+    color: $font-color-pink
   }
 
   .title {
@@ -647,6 +647,42 @@ footer {
 
     li.slick-active button{
       height: 20px;
+      opacity: 1;
+    }
+  }
+}
+
+.slider-home-banner {
+  position: relative;
+
+  .slick-dots {
+    position: absolute;
+    right: 60px;
+    top: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      font-size: 0;
+      border: 0;
+      outline: 0;
+      background: $font-color-pink;
+      width: 2px;
+      height: 20px;
+      margin: 10px 0;
+      opacity: .6;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+
+    li.slick-active button{
+      width: 20px;
       opacity: 1;
     }
   }
@@ -1933,16 +1969,12 @@ footer {
         background: $blue-background;
       }
 
-      p, li {
+      p, li, p.name {
         color: $font-color-light;
       }
 
       li {
-        background-image: url(../img/svg/check-solid-pink.svg);
-      }
-
-      p.name {
-        color: $font-color-pink;
+        background-image: url(../img/svg/check-solid.svg);
       }
     }
 
