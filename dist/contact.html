@@ -149,7 +149,7 @@
             <div class="col-md-auto col-12">
               <div class="header-bottom-right">
                 <div class="lang-bloc">
-                  <div id="lang-button">
+                  <div id="lang-button" data-toggle="modal" data-target="#settings-modal">
                     <span>RO</span>
                     <svg
                       width="14px"
@@ -326,11 +326,6 @@
         <section class="banner-page">
           <div class="container">
             <div class="row">
-              <ul class="col-lg-8 col-12 crumbs">
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
               <div class="col-lg-8 col-12">
                 <h1>Contact</h1>
               </div>
@@ -1079,6 +1074,43 @@
           </div>
         </div>
       </div>
+      <div class="modal fade" id="settings-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="close" data-dismiss="modal"></div>
+            <div class="title-modal">programare</div>
+            <form action="">
+              <div class="select-container">
+                <span>Language</span>
+                <select name="" id="">
+                  <option value="ro">RO</option>
+                  <option value="ru">RU</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+              <div class="select-container">
+                <span>Country</span>
+                <select name="" id="">
+                  <option value="romania">Romania</option>
+                  <option value="russia">Russia</option>
+                  <option value="us">US</option>
+                </select>
+              </div>
+              <div class="select-container">
+                <span>Currency</span>
+                <select name="" id="">
+                  <option value="lei">LEI</option>
+                  <option value="usd">USD</option>
+                  <option value="eur">EUR</option>
+                </select>
+              </div>
+              <div class="button" data-dismiss="modal">
+                <span>save</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script
@@ -1097,6 +1129,8 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
 
     <script src="js/bundle.js"></script>
   </body>

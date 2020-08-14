@@ -149,7 +149,7 @@
             <div class="col-md-auto col-12">
               <div class="header-bottom-right">
                 <div class="lang-bloc">
-                  <div id="lang-button">
+                  <div id="lang-button" data-toggle="modal" data-target="#settings-modal">
                     <span>RO</span>
                     <svg
                       width="14px"
@@ -323,20 +323,50 @@
       </header>
 
       <main class="home-content">
-        <section class="home-banner" style="background-image:url(img/dev/home-banner.jpg);">
-          <div class="inner-banner">
-            <div class="container">
-              <div class="row justify-content-end">
-                <div class="col-lg-8 col-12">
-                  <p>Care for your smile</p>
-                  <div class="title">
-                    Commited to excellence
+        <div class="slider-home-banner">
+          <section class="home-banner" style="background-image:url(img/dev/home-banner.jpg);">
+            <div class="inner-banner">
+              <div class="container">
+                <div class="row justify-content-end">
+                  <div class="col-lg-8 col-12">
+                    <p>Care for your smile</p>
+                    <div class="title">
+                      Commited to excellence
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+          <section class="home-banner" style="background-image:url(img/dev/home-banner.jpg);">
+            <div class="inner-banner">
+              <div class="container">
+                <div class="row justify-content-end">
+                  <div class="col-lg-8 col-12">
+                    <p>Care for your smile</p>
+                    <div class="title">
+                      Commited to excellence
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="home-banner" style="background-image:url(img/dev/home-banner.jpg);">
+            <div class="inner-banner">
+              <div class="container">
+                <div class="row justify-content-end">
+                  <div class="col-lg-8 col-12">
+                    <p>Care for your smile</p>
+                    <div class="title">
+                      Commited to excellence
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
 
         <section class="appointment">
           <div class="container">
@@ -463,7 +493,7 @@
           <div class="services-container">
             <div class="container">
               <div class="row">
-                <a href="a" class="col-lg-3 col-md-5 services-item">
+                <a href="service-one.html" class="col-lg-3 col-md-5 services-item">
                   <img src="img/dev/services1.png" alt="" />
                   <div class="service-description">
                     <div class="service-icon">
@@ -472,7 +502,7 @@
                     <p>Stomatologie generală</p>
                   </div>
                 </a>
-                <a href="a" class="col-lg-3 col-md-5 services-item">
+                <a href="service-one.html" class="col-lg-3 col-md-5 services-item">
                   <img src="img/dev/services2.png" alt="" />
                   <div class="service-description">
                     <div class="service-icon">
@@ -481,7 +511,7 @@
                     <p>Tratamentul endodontic la microscop</p>
                   </div>
                 </a>
-                <a href="a" class="col-lg-3 col-md-5 services-item">
+                <a href="service-one.html" class="col-lg-3 col-md-5 services-item">
                   <img src="img/dev/services3.png" alt="" />
                   <div class="service-description">
                     <div class="service-icon">
@@ -490,7 +520,7 @@
                     <p>Implanturi dentare</p>
                   </div>
                 </a>
-                <a href="a" class="col-lg-3 col-md-5 services-item">
+                <a href="service-one.html" class="col-lg-3 col-md-5 services-item">
                   <img src="img/dev/services4.png" alt="" />
                   <div class="service-description">
                     <div class="service-icon">
@@ -1341,6 +1371,43 @@
           </div>
         </div>
       </div>
+      <div class="modal fade" id="settings-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="close" data-dismiss="modal"></div>
+            <div class="title-modal">programare</div>
+            <form action="">
+              <div class="select-container">
+                <span>Language</span>
+                <select name="" id="">
+                  <option value="ro">RO</option>
+                  <option value="ru">RU</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+              <div class="select-container">
+                <span>Country</span>
+                <select name="" id="">
+                  <option value="romania">Romania</option>
+                  <option value="russia">Russia</option>
+                  <option value="us">US</option>
+                </select>
+              </div>
+              <div class="select-container">
+                <span>Currency</span>
+                <select name="" id="">
+                  <option value="lei">LEI</option>
+                  <option value="usd">USD</option>
+                  <option value="eur">EUR</option>
+                </select>
+              </div>
+              <div class="button" data-dismiss="modal">
+                <span>save</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script
@@ -1359,6 +1426,8 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
 
     <script src="js/bundle.js"></script>
   </body>

@@ -971,32 +971,35 @@ footer {
   }
 
   .nav {
-    display: flex;
+    display: block;
 
     li {
       display: block;
       border: 3px solid $blue-background-rgba;
+      border-bottom: 0;
+      width: 100%;
+      line-height: 40px;
 
       &:last-child {
-        border-right: 3px solid $blue-background-rgba;
+        border-bottom: 3px solid $blue-background-rgba;
       }
     }
 
     a {
-      font-size: $font-size-medium;
-      color: $font-color-light;
+      font-size: $font-size-standard;
+      color: $font-color-blue;
       font-family: $font-avenir-heavy;
       display: block;
       text-align: center;
       line-height: 40px;
-      background: $blue-background;
+      background: $light-background;
       padding-right: 30px;
       padding-left: 30px;
 
       &:hover,
       &.active {
-        background: #fff;
-        color: $font-color-blue;
+        background: $blue-background-rgba;
+        color: $font-color-light;
       }
     }
   }
@@ -1023,7 +1026,7 @@ footer {
   }
 
   .tab-content {
-    margin-top: 30px;
+    // margin-top: 30px;
   }
 }
 
