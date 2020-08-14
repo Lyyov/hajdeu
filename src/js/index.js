@@ -89,6 +89,12 @@ $( document ).ready(function() {
     ...defaultSliderSettings,
     ...sliderHomeTestimonial
   });
+
+  $(".slider-rooms").slick({
+    ...defaultSliderSettings,
+    dots:false,
+    arrows: true
+  });
   
 });
 

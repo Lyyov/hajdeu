@@ -688,6 +688,65 @@ footer {
   }
 }
 
+.slider-rooms {
+
+  .slick-list {
+    padding: 0 !important;
+  }
+
+  .slick-arrow {
+    font-size: 0;
+    background: none;
+    border: 0;
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 20px);
+    height: 40px;
+    width: 40px;
+    background-color: rgba($color: #EAE9E6, $alpha: .6);
+    z-index: 1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 0;
+      top: 0;
+      background-image: url(../img/svg/arrow-down.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      background-color: rgba($color: #EAE9E6, $alpha: 1);
+    }
+
+    &:active {
+
+      &:after {
+        background-size: 10px;
+      }
+    }
+  }
+
+  .slick-next {
+    left: auto;
+    right: 20px;
+
+    &:after {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .slick-prev {
+
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
 .book-visit {
   background-image: url(../img/backgrounds/book-visit.png);
   background-size: cover;
@@ -1898,6 +1957,14 @@ footer {
     }
   }
 
+  .room-section {
+    padding: 80px 0;
+
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
+
   .rates-section {
     padding: 80px 0;
     background: $light-background;
@@ -2162,6 +2229,156 @@ footer {
 
   .services {
     padding-bottom: 80px;
+  }
+}
+
+.rooms-content {
+  
+  .banner-page {
+    background-image: url(../img/backgrounds/rooms-banner.png);
+
+    &:after {
+      display: none;  
+    }
+  }
+
+  .room-staff {
+    padding: 80px 0;
+  }
+
+  .room-options-right {
+    background: $blue-background;
+    padding: 30px 40px;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    font-size: $font-size-standard;
+    font-family: $font-avenir-heavy;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    margin-bottom: 30px;
+  }
+
+  li {
+    font-size: $font-size-small;
+    font-family: $font-avenir-medium;
+    color: #fff;
+    padding-left: 20px;
+    display: block;
+    line-height: 30px;
+    background-image: url(../img/svg/check-rekt.svg);
+    background-size: 10px;
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+  }
+
+  .button {
+    
+    svg {
+      margin-left: 10px;
+    }
+
+    span {
+      font-size: $font-size-small;
+    }
+  }
+
+  .item {
+    width: 80px;
+    height: 80px !important;
+    background: $light-background;
+    box-shadow: 0 6px 12px 0 rgba(194,194,194,0.50);
+    border-radius: 4px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    span {
+      font-size: $font-size-small;
+      font-family: $font-avenir-medium;
+      color: $font-color-blue;
+      text-align: center;
+    }
+
+    svg {
+      width: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .room-options-bottom {
+    margin-top: 30px;
+    &>div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+  }
+
+  .contact {
+    margin-top: 30px;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../img/backgrounds/modal.png);
+    background-size: 100% 100%;
+    padding: 0 40px;
+    box-shadow: 0 6px 12px 0 rgba(194,194,194,0.50);
+    h5 {
+      color: $font-color-blue;
+      text-align: center;
+    }
+    a {
+      font-size: $font-size-small;
+      font-family: $font-avenir-medium;
+      color: $font-color-blue;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: 5px;
+    }
+    div {
+      display: flex;
+    }
+  }
+
+  .room-text {
+
+    p {
+      font-size: $font-size-standard;
+      font-family: $font-avenir-medium;
+      color: $font-color-blue;
+      margin-bottom: 30px;
+    }
+  }
+
+  .room-details {
+    padding: 50px 0;
+
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .details-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $font-color-blue;
+    margin-bottom: 20px;
+
+    span {
+      font-size: $font-size-standard;
+      font-family: $font-avenir-medium;
+      color: $font-color-blue;
+      line-height: 25px;
+    }
   }
 }
 
