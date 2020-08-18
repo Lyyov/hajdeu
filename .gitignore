@@ -53,6 +53,12 @@ sketch
 !.vscode/extensions.json
 *.code-workspace
 
+### dist map ###
+
+dist
+img
+docs
+
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history

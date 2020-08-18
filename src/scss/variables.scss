@@ -1,18 +1,18 @@
 // Fonts 
 
-$font-avenir-medium: "Avenir-Medium";
-$font-avenir-heavy: "Avenir-Heavy";
+$font-source-sans: "Source Sans Pro";
+$font-roboto-slab: "Roboto Slab";
 
 // Backgrounds
 
-$light-background: #F9F7EF url("") no-repeat center center;  /* color code (decimal, hexadecimal, rgb, rgba, etc...),
+$light-background: #ffffff url("") no-repeat center center;  /* color code (decimal, hexadecimal, rgb, rgba, etc...),
                                                           image,
                                                           repeat (repeat, repeat-x, repeat-y),
                                                           position x (left, right, 0% - 100%, pixels) ,
                                                           position y  (top, bottom, 0% - 100%, pixels),
                                                           header, */
 
-$pink-background: #BC68AA url("") no-repeat center center;
+$orange-background: #E9642D url("") no-repeat center center;
 
 $blue-background: #3A96D2 url("") no-repeat center center;
 
@@ -29,7 +29,7 @@ $pink-background-rgba: #BC68AA; /* borders */
 
 // Color Font
 
-$font-color-blue: #13476A;
+$font-color-dark: #363636;
 
 $font-color-pink: #BC68AA; /* nav items on hover, titles */
 
@@ -51,7 +51,7 @@ $font-size-large: 50px; /* page's titles */
 
 
 // Header && Footer
-
+$height-header: 95px;
 
 
 

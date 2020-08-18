@@ -48,48 +48,26 @@ $( document ).ready(function() {
 
   const defaultSliderSettings = {
     slidesToScroll: 1,
+    slidesToShow: 4,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
     centerMode: true,
-    arrows: false,
-    dots: true,
-    speed: 500
-  }
-
-  const sliderServiceTestimonial = {
-    slidesToShow: 3,
+    arrows: true,
+    dots: false,
+    speed: 500,
     responsive: [
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 2
         }
       }
     ]
-  };
-
-  const sliderHomeTestimonial = {
-    slidesToShow: 1,
-    fade: true,
-    cssEase: 'ease-in-out'
   }
 
-  let sliderSettings = {}
-
-  if ($("main").hasClass("home-content")) {
-    sliderSettings = { ...defaultSliderSettings, ...sliderHomeTestimonial }
-      $(".slider-testimonials").slick(sliderSettings);
-  } else if ($("main").hasClass("services-content")) {
-    sliderSettings = { ...defaultSliderSettings, ...sliderServiceTestimonial }
-    $(".slider-testimonials").slick(sliderSettings);
-  }
-
-  $(".slider-home-banner").slick({
-    ...defaultSliderSettings,
-    ...sliderHomeTestimonial
-  });
-  
+  $(".slider-standard").slick(defaultSliderSettings);
+  $(".slider-standard.slider-standard-film").slick({...defaultSliderSettings, variableWidth: true});
 });
 
 // images split script 
