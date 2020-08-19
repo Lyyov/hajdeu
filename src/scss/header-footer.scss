@@ -11,14 +11,15 @@ header {
     padding-left: 0;
   }
 
-  .container, .row {
+  .container,
+  .row {
     height: 100%;
   }
 
   .header-center {
     height: $height-header;
-    
-    &>ul {
+
+    & > ul {
       align-items: center;
       height: 100%;
     }
@@ -26,7 +27,7 @@ header {
     li {
       position: relative;
       display: block;
-      transition: all .3a ease;
+      transition: all 0.3s ease;
 
       &:hover {
         background: $orange-background;
@@ -49,10 +50,12 @@ header {
         opacity: 0;
         overflow: hidden;
         z-index: 1;
-        transition: all .3s ease;
-        box-shadow: 3px 4px 0 0 #E23826;
+        transition: all 0.3s ease;
+        box-shadow: 3px 4px 0 0 #e23826;
 
-        li, span, a {
+        li,
+        span,
+        a {
           color: #fff;
           line-height: 40px;
           font-size: $font-size-small;
@@ -69,7 +72,6 @@ header {
         li:first-child {
           margin-bottom: 0px;
           background: none !important;
-          
 
           a {
             line-height: 60px;
@@ -82,44 +84,29 @@ header {
         }
 
         li:hover {
-          background: #E23826;
+          background: #e23826;
         }
       }
-
-      &:hover ul {
-        height: auto;
-        opacity: 1;
-      }
     }
-    
   }
 
   .header-right {
     display: flex;
     align-items: center;
 
-    span, div, a {
+    span,
+    div,
+    a {
       text-transform: uppercase;
     }
 
-    &>div {
+    & > div {
       display: flex;
       align-items: center;
       height: 60px;
       padding: 0 5px;
       cursor: pointer;
       margin-left: 10px;
-
-      &:hover {
-        background: $orange-background;
-
-        span {
-          color: #fff;
-        }
-        .header-right-svg {
-          fill: #fff;
-        }
-      }
 
       svg {
         width: 20px;
@@ -137,7 +124,8 @@ header {
     align-items: center;
   }
 
-  a, span {
+  a,
+  span {
     font-family: $font-roboto-slab;
     font-size: $font-size-standard;
     color: $font-color-dark;
@@ -148,16 +136,16 @@ header {
   ul {
     display: flex;
     margin-left: -15px;
-    
+
     a {
       display: block;
       line-height: 60px;
       padding: 0 15px;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
     }
 
-
-    a, span {
+    a,
+    span {
       text-transform: uppercase;
     }
   }
@@ -205,7 +193,9 @@ footer {
     margin: 10px 0;
   }
 
-  a, li, p {
+  a,
+  li,
+  p {
     font-family: $font-source-sans;
     font-size: $font-size-standard;
     color: #fff;
@@ -218,13 +208,13 @@ footer {
   }
 
   a:hover {
-    color: #E9642D
+    color: #e9642d;
   }
 
   .title {
     text-transform: uppercase;
     margin-bottom: 5px;
-    color: #E9642D;
+    color: #e9642d;
   }
 }
 
@@ -293,7 +283,7 @@ footer {
   padding: 0 15px;
   align-items: center;
   z-index: 5;
-  transition: left .3s ease;
+  transition: left 0.3s ease;
 
   a.logo {
     margin-left: 15px;
@@ -301,13 +291,28 @@ footer {
   }
 }
 
+@media (min-width: 992px) {
+  header .header-center li:hover ul {
+    height: auto;
+    opacity: 1;
+  }
+
+  header .header-right > div:hover {
+    background: $orange-background;
+
+    span {
+      color: #fff;
+    }
+    .header-right-svg {
+      fill: #fff;
+    }
+  }
+}
+
 @media (max-width: 1260px) {
-
   header {
-
     .header-right {
-  
-      &>div {
+      & > div {
         padding: 0 10px;
 
         span {
@@ -326,11 +331,170 @@ footer {
 }
 
 @media (max-width: 1100px) {
+  header {
+    a,
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #cover {
+    overflow: hidden;
+    width: 100vw;
+  }
+
+  body.header-open {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    #header-mobile {
+      left: calc(100vw - 60px);
+      background: #ffffff;
+    }
+
+    header {
+      left: 0;
+    }
+  }
+
+  a.logo {
+    img {
+      width: 200px;
+    }
+  }
+
+  #header-mobile {
+    display: flex;
+  }
 
   header {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    overflow: scroll;
+    padding: 0 15px;
+    padding-bottom: 30px;
+    left: -100vw;
+    transition: left 0.3s ease;
 
-    a, span {
-      font-size: 14px;
+    a.logo {
+      display: block;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 0;
+
+      span {
+        margin-right: -30px;
+        padding-right: 30px;
+        background-image: url(../img/svg/arrow-down.svg);
+        background-repeat: no-repeat;
+        background-position: 100% center;
+        position: relative;
+        z-index: -1;
+      }
+    }
+
+    a {
+      text-align: center;
+    }
+
+    a,
+    span {
+      font-size: $font-size-standard;
+    }
+
+    .header-center {
+      height: auto;
+
+      li {
+        &:hover {
+          background: none;
+
+          a {
+            color: $font-color-dark;
+          }
+        }
+
+        ul {
+          background: none;
+          position: static;
+          max-width: 360px;
+          box-shadow: none;
+
+          li,
+          span,
+          a {
+            color: $font-color-dark;
+          }
+
+          li {
+            padding-right: 0;
+          }
+
+          li:hover {
+            background: none;
+          }
+        }
+      }
+    }
+
+    .header-right {
+      justify-content: center;
+    }
+
+    ul.open {
+      height: auto !important;
+      opacity: 1 !important;
+      margin-right: -30px;
+    }
+  }
+
+  footer {
+    .footer-inner {
+      flex-wrap: wrap;
+      padding: 30px 0;
+    }
+
+    .title {
+      margin-bottom: 0;
+      padding: 10px 0;
+      position: relative;
+
+      &:after {
+        content: "+";
+        color: $orange-background;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        line-height: 44px;
+        font-size: $font-size-medium;
+      }
+    }
+
+    ul {
+      border-bottom: 1px solid #fff;
+      height: 44px;
+      overflow: hidden;
+    }
+
+    ul.open {
+      height: auto;
+      padding-bottom: 15px;
+
+      .title {
+        &:after {
+          content: "-";
+        }
+      }
     }
   }
 }
