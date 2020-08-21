@@ -66,6 +66,41 @@ $(document).ready(function() {
     ...defaultSliderSettings,
     variableWidth: true,
   });
+
+  let target1 = 1;
+
+  $("#zoomModal").on("show.bs.modal", function(e) {
+    $(".zoomSlider").slick({
+      ...defaultSliderSettings,
+      initialSlide: parseInt(target1),
+      slidesToShow: 1,
+      responsive: [
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            variableWidth: false,
+          },
+        },
+      ],
+    });
+  });
+
+  $("#zoomModal").on("hidden.bs.modal", function(e) {
+    $(".zoomSlider").slick("unslick");
+  });
+
+  $(".modalContainer").click(function(e) {
+    if ($(this) === $(e.target)) {
+      $("#zoomModal").modal("hide");
+    }
+  });
 });
 
 // images split script
