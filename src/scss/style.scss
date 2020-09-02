@@ -590,9 +590,98 @@ main {
   }
 }
 
+.projects-all-content {
+  .banner-projects-all {
+    margin-bottom: 60px;
+  }
+
+  .item-project-one {
+    margin-bottom: 40px;
+
+    .title {
+      display: block;
+      font-size: $font-size-medium;
+      font-weight: 500;
+      margin-top: 10px;
+
+      &:hover {
+        color: #e9642d;
+      }
+    }
+
+    p {
+      font-size: $font-size-standard;
+      line-height: 20px;
+      height: 40px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 10px;
+    }
+  }
+
+  .image-container {
+    display: block;
+    overflow: hidden;
+
+    img {
+      transition: transform 1s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.2);
+      overflow: hidden;
+    }
+
+    &:hover + a {
+      color: #e9642d;
+    }
+  }
+}
+
 .cke-page {
   padding-bottom: 80px;
   min-height: 500px;
+
+  a {
+    font-family: $font-source-sans;
+    font-size: $font-size-standard;
+    line-height: 1.3;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h3 {
+    margin-top: 50px;
+  }
+
+  .nav-politiques {
+    margin-top: 60px;
+
+    a {
+      font-family: $font-source-sans;
+      font-size: $font-size-standard;
+      line-height: 2;
+    }
+  }
+}
+
+.cke-content.cke-content-accordion {
+  box-shadow: 0 2px 8px -3px $blue-dark-background-rgba;
+  margin-bottom: 30px;
+
+  .title {
+    font-size: $font-size-medium;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+
+  .card.card-body {
+    border-radius: 0;
+  }
 }
 
 .gallery {
@@ -714,8 +803,26 @@ main {
   b {
     font-weight: 700;
   }
-  h3 {
-    margin-top: 50px;
+  ul {
+    margin: 0;
+  }
+  li {
+    font-family: $font-source-sans;
+    font-size: $font-size-standard;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+
+  a {
+    font-weight: 700;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration-color: #e9642d;
+      color: #e9642d;
+    }
   }
 }
 
