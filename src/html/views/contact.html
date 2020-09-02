@@ -1,0 +1,50 @@
+<%=_.template(require('./../includes/head.html').default)(data) %>
+<%=_.template(require('./../includes/header.html').default)(data) %>
+
+<main class="contact-content">
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>Contacte</h3>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>
+              Adresa Sediului Central al Bibliotecii Municipale: Chisinau, 2012
+              bd. Stefan cel Mare nr. 148
+            </li>
+            <li>
+              tel./fax secretariat: <a href="tel:022223360"> 022 223 360</a>
+            </li>
+            <li>
+              email:
+              <a href="mailto:municipala@hasdeu.md">municipala@hasdeu.md</a>
+            </li>
+            <li>
+              <a href="www.hasdeu.md">www.hasdeu.md</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <form action="">
+            <p>Lasati o sugestie:</p>
+            <input type="text" placeholder="Nume / Prenume" />
+            <input type="text" placeholder="Telefon" />
+            <input type="email" placeholder="E-mail" />
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="20"
+              placeholder="Lasati un mesaj ..."
+            ></textarea>
+            <input type="submit" value="Trimite" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<%= _.template(require('./../includes/footer.html').default)(data) %> <%=
+_.template(require('./../includes/scripts.html').default)(data) %>

@@ -1,0 +1,67 @@
+<%=_.template(require('./../includes/head.html').default)(data) %>
+<%=_.template(require('./../includes/header.html').default)(data) %>
+
+<main class="cke-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3>Posturi vacante</h3>
+
+        <div class="accordion" id="accordion">
+          <div class="cke-content cke-content-accordion">
+            <p
+              class="title"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Alătură-te echipei BM „B.P. Hasdeu”!
+            </p>
+            <div class="collapse" id="collapseExample" data-parent="#accordion">
+              <div class="card card-body">
+                <p>
+                  Dacă îți place să comunici şi să interacţionezi cu membrii
+                  comunităţii, dacă doreşti să aduci un strop de entuziasm,
+                  profesionalism și voie bună în activitatea noastră,biblioteca
+                  este cel mai potrivit loc din comunitate. La noi se întâmplă
+                  lucruri frumoase! Când oameni dedicați, inteligenți, creativi,
+                  lucrează împreună, într-o echipă unită, rezultatele sunt
+                  excepționale!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="cke-content cke-content-accordion">
+            <p
+              class="title"
+              data-toggle="collapse"
+              data-target="#collapseExample1"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Acceptă provocarea!
+            </p>
+            <div
+              class="collapse"
+              id="collapseExample1"
+              data-parent="#accordion"
+            >
+              <div class="card card-body">
+                <p>
+                  Trimite-ne CV-ul tău la
+                  <a href="mailto:personal.hasdeu@gmail.com"
+                    >personal.hasdeu@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %> <%=
+_.template(require('./../includes/scripts.html').default)(data) %>
