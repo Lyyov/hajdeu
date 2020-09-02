@@ -1,0 +1,77 @@
+<%=_.template(require('./../includes/head.html').default)(data) %>
+<%=_.template(require('./../includes/header.html').default)(data) %>
+
+<main class="cke-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3>TRANSPARENȚĂ FINANCIARĂ</h3>
+
+        <div class="accordion" id="accordion">
+          <div class="cke-content cke-content-accordion">
+            <p
+              class="title"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              2020
+            </p>
+            <div class="collapse" id="collapseExample" data-parent="#accordion">
+              <div class="card card-body">
+                <ul>
+                  <li>
+                    <a
+                      href="http://hasdeu.md/data/userfiles/files/Planul%20de%20achizi%C8%9Bii%202020_1.jpg"
+                      >Planul de achiziții 2020_1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://hasdeu.md/data/userfiles/files/Planul%20de%20achizi%C8%9Bii%202020_2.jpg"
+                      >Planul de achiziții 2020_2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://hasdeu.md/data/userfiles/files/Raport%20monitorizare%20contracte%20prima%20jum%C4%83tate%202020_1(1).jpg"
+                      >Raport monitorizare contracte prima jumătate 2020_1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://hasdeu.md/data/userfiles/files/Raport%20monitorizare%20contracte%20prima%20jum%C4%83tate%202020_2(1).jpg"
+                      >Raport monitorizare contracte prima jumătate 2020_2</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="cke-content cke-content-accordion">
+            <p
+              class="title"
+              data-toggle="collapse"
+              data-target="#collapseExample4"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              2021
+            </p>
+            <div
+              class="collapse"
+              id="collapseExample4"
+              data-parent="#accordion"
+            >
+              <div class="card card-body"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %> <%=
+_.template(require('./../includes/scripts.html').default)(data) %>

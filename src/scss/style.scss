@@ -672,6 +672,34 @@ input[type="submit"] {
   }
 }
 
+.projects-all-content.book-category-one-content {
+  .item-project-one {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+  .image-container {
+    margin-left: 30px;
+    width: 150px;
+  }
+  .book-description {
+    width: calc(100% - 150px);
+    & > div {
+      margin-bottom: 30px;
+      border-left: 5px solid #e9642d;
+      padding-left: 15px;
+    }
+  }
+
+  .row {
+    justify-content: center;
+
+    & > div:nth-child(odd) .item-project-one {
+      background-color: hsla(0, 0%, 91%, 0.8);
+    }
+  }
+}
+
 .cke-page {
   padding-bottom: 80px;
   min-height: 500px;
@@ -971,6 +999,22 @@ input[type="submit"] {
   .modal {
     .modal-content {
       padding: 40px 15px;
+    }
+  }
+
+  .projects-all-content.book-category-one-content {
+    .item-project-one {
+      padding: 15px;
+    }
+    .image-container {
+      margin-left: 15px;
+      width: 80px;
+    }
+    .book-description {
+      width: calc(100% - 80px);
+      & > div {
+        padding-left: 15px;
+      }
     }
   }
 }
